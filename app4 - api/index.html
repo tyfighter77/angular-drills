@@ -1,7 +1,20 @@
 <html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<head>
+		<title>API App</title>
+		<link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+		<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body ng-controller="mainControl">
+		<img class="logo" src="http://tvfiles.alphacoders.com/552/clearlogo-552.png"/>
+		<div class="wrapper">
+			<div class="contentBox" ng-repeat="smurf in data">
+				<img class="pic" src="{{smurf.img}}"/>
+				<br/>
+				{{smurf.name}}
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>

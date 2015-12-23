@@ -1,9 +1,33 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<html ng-app="filterApp">
+
+<head>
+	<link rel="stylesheet" href="style.css"></link>
+	<title>Filter App</title>
+</head>
+
+<body ng-controller="mainCtrl">
+	<input class="filterBox" placeholder="Search..." ng-model="filterFriend">
+		<table class="personData">
+	    <tr>
+	      <th>NAME</th>
+	      <th>EMAIL</th>
+	      <th>PHONE</th>
+				<th>EMPLOYED</th>
+	    </tr>
+	    <tr ng-repeat="contact in data | filter: filterFriend">
+	      <td>{{contact.name}}</td>
+				<td>{{contact.email}}</td>
+	      <td>{{contact.phone}}</td>
+	      <td>{{contact.dateEmployed}}</td>
+	    </tr>
+	  </table>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+
 </html>

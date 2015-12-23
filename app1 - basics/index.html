@@ -1,9 +1,23 @@
-<html>
-	<body>
-	
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<!DOCTYPE html>
+<html ng-app="textEcho">
+
+<head>
+	<link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+	<title>Text Echo</title>
+</head>
+
+<body ng-controller="mainCtrl">
+
+		<input class="textBox" type="text" placeholder="type here" ng-model="textInput"></input>
+		<div class="output">
+			<br/> {{textInput}}
+		</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+
 </html>

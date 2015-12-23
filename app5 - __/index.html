@@ -1,0 +1,38 @@
+<html ng-app="myApp">
+	<head>
+		<link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+		<title>Larger App</title>
+	</head>
+	<body ng-controller="mainController">
+		<h1>PLANETS OF THE STAR WARS GALAXY</h1>
+		<input class="filterBox" placeholder="Search..." ng-model="filterPlanet">
+
+			<table class="planetData">
+				<tr>
+					<th>Planet</th>
+					<th>Diameter</th>
+					<th>Climate</th>
+					<th>Terrain</th>
+					<th>Orbit</th>
+					<th>Rotation</th>
+					<th>Population</th>
+				</tr>
+				<tr ng-repeat="planet in planets | filter: filterPlanet">
+					<td>{{planet.name}}</td>
+					<td>{{planet.diameter}}</td>
+					<td>{{planet.climate}}</td>
+					<td>{{planet.terrain}}</td>
+					<td>{{planet.orbital_period}} Days</td>
+					<td>{{planet.rotation_period}} Hrs</td>
+					<td>{{planet.population}}</td>
+				</tr>
+
+			</table>
+		<div class="tableBox">
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="app.js"></script>
+		<script src="controller.js"></script>
+		<script src="service.js"></script>
+	</body>
+</html>

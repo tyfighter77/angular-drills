@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+  background: url("https://premiumcoding.com/wp-content/uploads/2014/02/space-background1.png");
+  background-size: cover;
+}
+
+h1{
+  display: block;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  color: #008cff;
+  font-size: 40px;
+}
+
+.planetData {
+  display: block;
+  margin: auto;
+  line-height: 30px;
+}
+
+.filterBox {
+  display: block;
+  margin: 40px auto;
+  width: 300px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #f9e63e;
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+table{
+  text-transform: uppercase;
+}
+
+th {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #008cff;
+  font-weight: normal;
+
+}
+
+td {
+  padding: 0 20px;
+  text-align: center;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #f9e63e;
+  font-weight: bolder;
+
+}
